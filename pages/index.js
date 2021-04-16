@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Chat App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Sidebar />
     </div>

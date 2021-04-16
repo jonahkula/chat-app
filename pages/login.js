@@ -6,9 +6,10 @@ function Login() {
     <Container>
       <Head>
         <title>Login</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <LoginContainer>
-        {/* <Logo src="https://logos-world.net/wp-content/uploads/2020/05/WhatsApp-Logo.png" /> */}
+        <Logo src="/chatLogo.png" />
       </LoginContainer>
     </Container>
   );
