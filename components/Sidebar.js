@@ -41,20 +41,25 @@ function Sidebar() {
   return (
     <Container>
       <Header>
-        <UserAvatar src={user.photoURL} onClick={() => auth.signOut()} />
-        <IconsContainer>
+        <UserAvatar
+          title="Log Out"
+          src={user.photoURL}
+          onClick={() => auth.signOut()}
+        />
+        <h2>Chat App</h2>
+        {/* <IconsContainer>
           <IconButton>
             <ChatIcon />
           </IconButton>
           <IconButton>
             <MoreVertIcon />
           </IconButton>
-        </IconsContainer>
+        </IconsContainer> */}
       </Header>
-      <Search>
+      {/* <Search>
         <SearchIcon />
         <SearchInput placeholder="Search in chats" />
-      </Search>
+      </Search> */}
       <SidebarButton onClick={createChat}>Start a new chat</SidebarButton>
       {chatsSnapshot?.docs.map((chat) => (
         <Chat key={chat.id} id={chat.id} users={chat.data().users} />

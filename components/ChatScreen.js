@@ -93,7 +93,7 @@ function ChatScreen({ chat, messages }) {
         )}
         <HeaderInformation>
           <h3>{recipientEmail}</h3>
-          {recipientSnapshot ? (
+          {/* {recipientSnapshot ? (
             <p>
               Last online:{" "}
               {recipient?.lastSeen?.toDate() ? (
@@ -104,26 +104,30 @@ function ChatScreen({ chat, messages }) {
             </p>
           ) : (
             <p>Loading last online...</p>
-          )}
+          )} */}
         </HeaderInformation>
-        <HeaderIcons>
+        {/* <HeaderIcons>
           <IconButton>
             <AttachFileIcon />
           </IconButton>
           <IconButton>
             <MoreVertIcon />
           </IconButton>
-        </HeaderIcons>
+        </HeaderIcons> */}
       </Header>
       <MessageContainer>
         {showMessages()}
         <EndOfMessage ref={endOfMessagesRef} />
       </MessageContainer>
       <InputContainer>
-        <InsertEmoticonIcon />
-        <Input value={input} onChange={(e) => setInput(e.target.value)} />
+        {/* <InsertEmoticonIcon /> */}
+        <Input
+          placeholder="Say something here!"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
         <button hidden disabled={!input} type="submit" onClick={sendMessage} />
-        <MicIcon />
+        {/* <MicIcon /> */}
       </InputContainer>
     </Container>
   );
@@ -148,9 +152,9 @@ const Header = styled.div`
 const HeaderInformation = styled.div`
   margin-left: 15px;
   flex: 1;
-  > h3 {
+  /* > h3 {
     margin-bottom: 3px;
-  }
+  } */
   > p {
     font-size: 14px;
     color: gray;
