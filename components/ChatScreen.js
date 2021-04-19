@@ -122,7 +122,7 @@ function ChatScreen({ chat, messages }) {
       <InputContainer>
         {/* <InsertEmoticonIcon /> */}
         <Input
-          placeholder="Say something here!"
+          placeholder="Enter your message"
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
@@ -180,6 +180,7 @@ const Input = styled.input`
   padding: 20px;
   margin-left: 15px;
   margin-right: 15px;
+  font-size: 16px;
 `;
 
 const EndOfMessage = styled.div`
